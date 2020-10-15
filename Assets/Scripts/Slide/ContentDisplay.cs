@@ -21,6 +21,13 @@ public class ContentDisplay : MonoBehaviour {
 		StartCoroutine(Type());
 	}
 
+	void Update()
+	{
+
+		background.sprite = content.background;
+		StartCoroutine(Type());
+	}
+
 
 
 	IEnumerator Type()

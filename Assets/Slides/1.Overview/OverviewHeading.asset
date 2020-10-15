@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexNumber: 1
   heading: OVERVIEW
+  clip: {fileID: 8300000, guid: d16f349ce0becfb459be0f86411b841b, type: 3}

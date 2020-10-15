@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6fcb0a2b547229449ea178f9e4eb56e, type: 3}
+  m_Name: data
+  m_EditorClassIdentifier: 
+  contents:
+  - {fileID: 11400000, guid: 40072fd041692c144a95cb5936f7089a, type: 2}
+  - {fileID: 11400000, guid: 6c47a9dad892e8b49a521492b604d92e, type: 2}
+  - {fileID: 11400000, guid: 70ae954f6a187e04c8dcd7ea6b2d8aca, type: 2}
+  - {fileID: 11400000, guid: 0a0e403017fde4f4898d54bef7f387d9, type: 2}
+  - {fileID: 11400000, guid: 852b6f15eda1ddb42825a50b0fa49e71, type: 2}
+  - {fileID: 11400000, guid: b2fc9a6b930ed1944be9f91e60070968, type: 2}
+  - {fileID: 11400000, guid: eba37cdfe81e7df498752f4326734d02, type: 2}
+  headings:
+  - {fileID: 11400000, guid: edb46390ad645e8448d24a52d6bf3575, type: 2}
+  - {fileID: 11400000, guid: d5d8a8fb5e17f1647b2f5801853362b5, type: 2}
+  - {fileID: 11400000, guid: 62aa0344a9446964996213a58bafe309, type: 2}
+  - {fileID: 11400000, guid: 5e8e074a1bb411b46b340ac6787d2a77, type: 2}
+  - {fileID: 11400000, guid: 0cc55a30a56fe68489e5370b6aaa2c04, type: 2}
+  - {fileID: 11400000, guid: 8848c5ea1ef62cd44a163f16bb4c6b5f, type: 2}
+  - {fileID: 11400000, guid: 34e95fe5f9ca45f40a855a63a4ecf21e, type: 2}
+  video:
+  - {fileID: 32900000, guid: de7e41dc123429042b12dccd74d930fc, type: 3}
+  - {fileID: 32900000, guid: 46adb1c2326eb7948bb4d67aca0a7fbe, type: 3}
+  - {fileID: 32900000, guid: 2a68a51dca630a242841baac05886535, type: 3}
+  - {fileID: 32900000, guid: c7976e4baab7fef49895045df6dcb555, type: 3}
+  - {fileID: 32900000, guid: 10ce3453a37c5a248bd3de9ecbaee5d2, type: 3}
+  - {fileID: 32900000, guid: 1db4cc87baadd8c448b028fe0448c067, type: 3}
+  headingClip:
+  - {fileID: 8300000, guid: d16f349ce0becfb459be0f86411b841b, type: 3}
+  contentClip:
+  - {fileID: 8300000, guid: d16f349ce0becfb459be0f86411b841b, type: 3}

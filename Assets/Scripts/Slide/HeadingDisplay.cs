@@ -18,5 +18,11 @@ public class HeadingDisplay : MonoBehaviour {
 		indexNumberText.text = heading.indexNumber;
 		headingText.text = heading.heading;       
     }
-	
+
+	void Update()
+	{
+		indexNumberText.text = heading.indexNumber;
+		headingText.text = heading.heading;
+	}
+
 }

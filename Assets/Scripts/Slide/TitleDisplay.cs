@@ -22,5 +22,14 @@ public class TitleDisplay : MonoBehaviour {
 		timeText.text = title.time;
 		background.sprite = title.background;
     }
-	
+
+	// Use this for initialization
+	void Update()
+	{
+		titleText.text = title.title;
+		dateText.text = title.date;
+		timeText.text = title.time;
+		background.sprite = title.background;
+	}
+
 }
