@@ -7,6 +7,4 @@ public class Heading : ScriptableObject {
 
 	public string indexNumber;
 	public string heading;
-	
-
 }
