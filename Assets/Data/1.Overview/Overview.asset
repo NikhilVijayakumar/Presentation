@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8b80d7bc810b843b8132eda5f52051, type: 3}
+  m_Name: Overview
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 8ecbefe736910d849a14788fde652ef4, type: 3}
+  data:
+  - 'A video game is an electronic game '
+  - that involves interaction with a user interface
+  - ' or input device such as a joystick, controller,'
+  - ' keyboard,or motion sensing devices'
+  - to generate visual feedback for a player.
+  - This is then shown on a 2 or 3 dimensional
+  - ' video display device such as a TV set, '
+  - monitor, touchscreen, or  VR headset
+  - 'Video games are augmented with audio '
+  - feedback from speakers or headphones
+  typeSpeed: 0.7
+  sentenceDelay: 1
