@@ -11,7 +11,8 @@
         FarCry6 = 6,
         FlightSimulator = 7,
         GTA6 = 8,
-        Pacman = 9
+        Pacman = 9,
+        Witcher = 10
     }
 }
 

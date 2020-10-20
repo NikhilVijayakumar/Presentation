@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8b80d7bc810b843b8132eda5f52051, type: 3}
   m_Name: Overview
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: 8ecbefe736910d849a14788fde652ef4, type: 3}
+  background: {fileID: 21300000, guid: 626a5cf768825e84894d4cb1d0971eff, type: 3}
   data:
   - 'A video game is an electronic game '
   - that involves interaction with a user interface
@@ -24,5 +24,6 @@ MonoBehaviour:
   - monitor, touchscreen, or  VR headset
   - 'Video games are augmented with audio '
   - feedback from speakers or headphones
-  typeSpeed: 0.7
-  sentenceDelay: 1
+  - '!   -         -              -   !'
+  typeSpeed: 0.1
+  sentenceDelay: 0.3

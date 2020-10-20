@@ -11,7 +11,8 @@ using Presentation.Video.Model;
 using Presentation.Video.Controller;
 using Presentation.Pannel.Model;
 using Presentation.Pannel.Manager;
-
+using Presentation.Pannel.Helper;
+using System.ComponentModel;
 
 namespace Presentation.Pannel.Controller
 {
@@ -22,100 +23,88 @@ namespace Presentation.Pannel.Controller
         private bool isContentCompleted;
         private DataManager manager;
 
+        private TitleHelper titleHelper;
+        private MenuHelper menuHelper;
+        private HeadingHelper headingHelper;
+        private ContentHelper contentHelper;
+        private VideoHelper videoHelper;
+
         void Start()
         {
+            InitData();
+            ActivateInitialSlides();
+           
+            //activateVideo(VideoClips.CyberPunk);
+           
+        }
+        private void InitData()
+        {
             manager = new DataManager();
-            activateTitleSlide();
+            titleHelper = new TitleHelper(getPannel(PannelModel.slides), getPannel(PannelModel.titleSlide)); 
+            menuHelper = new MenuHelper(getPannel(PannelModel.indexMenu));
+            headingHelper = new HeadingHelper(getPannel(PannelModel.slides), getPannel(PannelModel.headingSlide), getPannel(PannelModel.audio), onAudioFinished);
+            contentHelper = new ContentHelper(getPannel(PannelModel.slides), getPannel(PannelModel.contentSlide), getPannel(PannelModel.audio), onAudioFinished,onContentCompleted);
+            videoHelper = new VideoHelper(getPannel(PannelModel.video), getPannel(PannelModel.audio), onAudioFinished);
+        }
+
+        private void ActivateInitialSlides()
+        {
             activateIndexMenu();
-            // activateVideo(VideoClips.CyberPunk);
-            // activateHeadingAudio(HeadingClip.overview);
+            activateTitleSlide();
+            
         }
 
-        int getIndex(PannelModel index)
+        private void deActivateAll()
         {
-            return (int)index;
+            titleHelper.deActivate();
+           // menuHelper.deActivate();
+            headingHelper.deActivate();
+            contentHelper.deActivate();
+            videoHelper.deActivate();
         }
 
 
-        void activatePannel(int index)
+        private GameObject getPannel(PannelModel pannelName)
         {
-            panels[index].SetActive(true);
+            return panels[(int)pannelName];
         }
-
-        void deActivatePannel(int index)
-        {
-            panels[index].SetActive(false);
-        }
-   
-
 
         void activateIndexMenu()
-        {
-            activatePannel(getIndex(PannelModel.indexMenu));
+        {            
+            menuHelper.activate();
         }
 
 
         void activateTitleSlide()
         {
             isContentCompleted = true;
-            activatePannel(getIndex(PannelModel.slides));
-            activatePannel(getIndex(PannelModel.titleSlide));
+            deActivateAll();
+            titleHelper.activate();
         }
 
         void activateHeadingSlide(Topics topics)
         {
             isContentCompleted = true;
-            GameObject headingData = panels[getIndex(PannelModel.headingSlide)];
-            HeadingView display = headingData.GetComponent<HeadingView>();
-            display.heading = data.headings[(int)topics];
-            activatePannel(getIndex(PannelModel.slides));
-            headingData.SetActive(true);
-            deActivatePannel(getIndex(PannelModel.titleSlide));
-            deActivatePannel(getIndex(PannelModel.contentSlide));
-            activateHeadingAudio(manager.getHeadingClipFromTopic(topics));
+            deActivateAll();
+            headingHelper.setHeading(data.headings[(int)topics], data.headingClip[(int)manager.getHeadingClipFromTopic(topics)]);
+            headingHelper.activate();            
         }
-
-        void activateHeadingAudio(HeadingAudio clips)
-        {
-            GameObject audioPannel = panels[getIndex(PannelModel.audio)];
-            AudioController controller = audioPannel.GetComponent<AudioController>();
-            controller.clip = data.headingClip[(int)clips];
-            controller.isAdded = true;
-            controller.finished = onAudioFinished;
-            audioPannel.SetActive(true);
-        }
+        
 
         void activateContentSlide(Topics topics)
         {
             isContentCompleted = false;
-            GameObject contentData = panels[getIndex(PannelModel.contentSlide)];
-            ContentView display = contentData.GetComponent<ContentView>();
-            display.content = data.contents[(int)topics];
-            display.completed = onContentCompleted;
-            activatePannel(getIndex(PannelModel.slides));
-            contentData.SetActive(true);
-            deActivatePannel(getIndex(PannelModel.titleSlide));
-            deActivatePannel(getIndex(PannelModel.headingSlide));
-            activateContentAudio(manager.getContentClipFromTopic(topics));
+            deActivateAll();
+            contentHelper.setContent(data.contents[(int)topics], data.contentClip[(int)manager.getContentClipFromTopic(topics)]);
+            contentHelper.activate();
         }
-
-        void activateContentAudio(ContentAudio clips)
-        {
-            GameObject audioPannel = panels[getIndex(PannelModel.audio)];
-            AudioController controller = audioPannel.GetComponent<AudioController>();
-            controller.clip = data.contentClip[(int)clips];
-            controller.isAdded = true;
-            controller.finished = onAudioFinished;
-            audioPannel.SetActive(true);
-        }
-
+    
         void activateVideo(VideoClips clips)
         {
-            GameObject videoPannel = panels[getIndex(PannelModel.video)];
-            VideoController controller = videoPannel.GetComponent<VideoController>();
-            controller.video = data.video[(int)clips];
-            controller.audio = data.videoAudioClips[(int)manager.getVideoAudioClip(clips)];
-            videoPannel.SetActive(true);
+            isContentCompleted = true;
+            deActivateAll();
+            videoHelper.setVideo(data.video[(int)clips], data.videoAudioClips[(int)manager.getVideoAudioClip(clips)], data.videoContentAudio[(int)manager.getVideoTopics()]);
+            videoHelper.activate();
         }
 
 
@@ -134,7 +123,7 @@ namespace Presentation.Pannel.Controller
                 }
                 else if (type == SlideModel.Video)
                 {
-
+                    activateVideo(manager.getNextVideoClips());
                 }
                 else
                 {
@@ -151,8 +140,7 @@ namespace Presentation.Pannel.Controller
         }
 
         public void gotoOverview()
-        {
-            print("gotoOverview");
+        {           
             activateHeadingSlide(Topics.Overview);
 
         }

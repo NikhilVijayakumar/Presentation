@@ -16,36 +16,40 @@ namespace Presentation.Pannel.Manager
         }
 
         public VideoClips getVideo(VideoTopics topic)
-        {
+        {         
             switch ((int)topic)
             {
-                case 0:
+                case 0:                  
                     manager.setControlFlow(ControlFlowModel.OverviewVideo);
-                    return VideoClips.AgeOfEmpires;
+                    return VideoClips.CyberPunk;
                 case 1:
+                   
                     manager.setControlFlow(ControlFlowModel.GameGenresVideoAction);
-                    return VideoClips.AssasisCreed;
+                    return VideoClips.CallOfDuty; 
                 case 2:
                     manager.setControlFlow(ControlFlowModel.GameGenresVideoAdventure);
-                    return VideoClips.CallOfDuty;
+                    return VideoClips.AssasisCreed;
                 case 3:
                     manager.setControlFlow(ControlFlowModel.GameGenresVideoRolePlay);
-                    return VideoClips.Civilization6;
+                    return VideoClips.Witcher;
                 case 4:
                     manager.setControlFlow(ControlFlowModel.GameGenresVideoSimulation);
-                    return VideoClips.CyberPunk;
+                    return VideoClips.FlightSimulator;
                 case 5:
                     manager.setControlFlow(ControlFlowModel.GameGenresVideoStrategy);
-                    return VideoClips.FarCry6;
+                    return VideoClips.Civilization6;
                 case 6:
                     manager.setControlFlow(ControlFlowModel.GamePlatformVideo);
-                    return VideoClips.FlightSimulator;
+                    return VideoClips.FarCry6;
                 case 7:
-                    manager.setControlFlow(ControlFlowModel.GameTypesVideo);
-                    return VideoClips.FlightSimulator;
+                    manager.setControlFlow(ControlFlowModel.GameTypesVideo2d);
+                    return VideoClips.Contra;
                 case 8:
+                    manager.setControlFlow(ControlFlowModel.GameTypesVideo3d);
+                    return VideoClips.GTA6;
+                case 9:
                     manager.setControlFlow(ControlFlowModel.GameEnginesVideo);
-                    return VideoClips.FlightSimulator;
+                    return VideoClips.FarCry6;
                 default:
                     manager.setControlFlow(ControlFlowModel.OverviewVideo);
                     return VideoClips.GTA6;
@@ -75,6 +79,10 @@ namespace Presentation.Pannel.Manager
                     return VideoAudioClips.FlightSimulator;
                 case 8:
                     return VideoAudioClips.GTA6;
+                case 9:
+                    return VideoAudioClips.None;
+                case 10:
+                    return VideoAudioClips.Witcher;
                 default:
                     return VideoAudioClips.None;
             }

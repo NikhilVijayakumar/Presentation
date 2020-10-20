@@ -21,6 +21,6 @@ MonoBehaviour:
   - is a 2d  Platformer game. Developed
   - with unity sample code and assets.
   - Code and builds are available in Github
-  - 
-  typeSpeed: 0.8
-  sentenceDelay: 1
+  - '!   -         -              -   !'
+  typeSpeed: 0.085
+  sentenceDelay: 0.12

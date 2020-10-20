@@ -16,6 +16,7 @@ namespace Presentation.Pannel.Model
         public AudioClip[] headingClip;
         public AudioClip[] contentClip;
         public AudioClip[] videoAudioClips;
+        public AudioClip[] videoContentAudio;
 
     }
 }

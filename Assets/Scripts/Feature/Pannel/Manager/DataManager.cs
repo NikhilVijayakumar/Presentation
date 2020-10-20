@@ -28,6 +28,16 @@ namespace Presentation.Pannel.Manager
             return controlManager.getNextTopic(); ;
         }
 
+        public VideoClips getNextVideoClips()
+        {
+            return videoManager.getVideo(getVideoTopics());
+        }
+
+        public VideoTopics getVideoTopics()
+        {
+            return controlManager.getNextVideoTopics();
+        }
+
 
 
         public HeadingAudio getHeadingClipFromTopic(Topics topic)

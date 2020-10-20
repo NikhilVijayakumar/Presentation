@@ -1528,7 +1528,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565705706}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: c7976e4baab7fef49895045df6dcb555, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 2a68a51dca630a242841baac05886535, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1541,14 +1541,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -2136,8 +2134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 141257076}
-  video: {fileID: 32900000, guid: de7e41dc123429042b12dccd74d930fc, type: 3}
-  audio: {fileID: 8300000, guid: 7e249820d0083124bb4e0dd18d13f23e, type: 3}
+  videoContent: {fileID: 32900000, guid: 2a68a51dca630a242841baac05886535, type: 3}
+  audioContent: {fileID: 8300000, guid: 3869a6e833c6f31489007d03a26ec9da, type: 3}
   audioSource: {fileID: 1974639001}
   videoPlayer: {fileID: 565705707}
 --- !u!1 &964119358
@@ -2456,7 +2454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1122827871
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2490,7 +2488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03a111c9d8c7d440b9cd21aacc93cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: {fileID: 11400000, guid: 14a3e29bf33398a48bc897002544844a, type: 2}
+  content: {fileID: 11400000, guid: 70781a50a5e1c3a439d542dcab5a29c3, type: 2}
   contentText: {fileID: 1283587938}
   background: {fileID: 1404547542}
 --- !u!1 &1249378028
@@ -4056,7 +4054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1857027604
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4090,7 +4088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 264688473}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 63ccb5a0fe2f3ad40bb4659841f0b272, type: 3}
   volume: 1
   isAdded: 0
 --- !u!1 &1974638999
@@ -4139,7 +4137,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3869a6e833c6f31489007d03a26ec9da, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

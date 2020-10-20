@@ -19,12 +19,15 @@ namespace Presentation.Pannel.Manager
 
         public HeadingAudio getHeadingClipFromTopic(Topics topic)
         {
+
             switch ((int)topic)
             {
                 case 0:
+                    Debug.Log("getHeadingClipFromTopic controlFlow: " + ControlFlowModel.OverviewHeading);
                     manager.setControlFlow(ControlFlowModel.OverviewHeading);
                     return HeadingAudio.overview;
                 case 1:
+                    Debug.Log("getHeadingClipFromTopic controlFlow: " + ControlFlowModel.GameGenresHeading);
                     manager.setControlFlow(ControlFlowModel.GameGenresHeading);
                     return HeadingAudio.gameGenres;
                 case 2:
@@ -50,9 +53,11 @@ namespace Presentation.Pannel.Manager
             switch ((int)topic)
             {
                 case 0:
+                    Debug.Log("getContentClipFromTopic controlFlow: " + ControlFlowModel.OverviewContent);
                     manager.setControlFlow(ControlFlowModel.OverviewContent);
                     return ContentAudio.overview;
                 case 1:
+                    Debug.Log("getContentClipFromTopic controlFlow: " + ControlFlowModel.GameGenresContent);
                     manager.setControlFlow(ControlFlowModel.GameGenresContent);
                     return ContentAudio.gameGenres;
                 case 2:
@@ -66,13 +71,13 @@ namespace Presentation.Pannel.Manager
                     return ContentAudio.gameEngines;
                 case 5:
                     manager.setControlFlow(ControlFlowModel.DemoContent1);
-                    return ContentAudio.demo;
+                    return ContentAudio.demo1;
                 case 6:
                     manager.setControlFlow(ControlFlowModel.DemoContent2);
-                    return ContentAudio.demo;
+                    return ContentAudio.demo2;
                 case 7:
                     manager.setControlFlow(ControlFlowModel.DemoContent3);
-                    return ContentAudio.demo;
+                    return ContentAudio.demo3;
                 default:
                     manager.setControlFlow(ControlFlowModel.OverviewContent);
                     return ContentAudio.overview;

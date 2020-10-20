@@ -23,5 +23,6 @@ MonoBehaviour:
   - and gaming world is 2d and uses
   - 2D sprites. In 3D all game objects
   - are 3D models.
-  typeSpeed: 0.2
-  sentenceDelay: 1
+  - '!   -         -              -   !'
+  typeSpeed: 0.125
+  sentenceDelay: 0.165

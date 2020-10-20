@@ -19,6 +19,6 @@ MonoBehaviour:
   - With sample code and assets from Unity
   - This is a 3d racing game
   - Code and build are available in Github
-  - 
-  typeSpeed: 0.8
-  sentenceDelay: 1
+  - '!   -         -              -   !'
+  typeSpeed: 0.1
+  sentenceDelay: 0.15

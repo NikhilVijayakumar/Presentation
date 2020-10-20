@@ -15,6 +15,7 @@ namespace Presentation.Pannel.Manager
         public void setControlFlow(ControlFlowModel flow)
         {
             controlFlow = flow;
+            
         }
 
         public Topics getNextTopic()
@@ -28,19 +29,20 @@ namespace Presentation.Pannel.Manager
         }
 
         public SlideModel getSlideType()
-        {   
-     
+        {
+         //   Debug.Log("getSlideType controlFlow: " + controlFlow + 1);
             switch ((int)controlFlow + 1)
-            {
+            {                
+
                 case 0:
                     nextTopic = Topics.Overview;
                     return SlideModel.Heading;
                 case 1:
+                    videoTopics = VideoTopics.OverviewVideo;
+                    return SlideModel.Video;                   
+                case 2:
                     nextTopic = Topics.Overview;
                     return SlideModel.Content;
-                case 2:
-                    videoTopics = VideoTopics.OverviewVideo;
-                    return SlideModel.Video;
                 case 3:
                     nextTopic = Topics.GameGenres;
                     return SlideModel.Heading;
@@ -78,27 +80,30 @@ namespace Presentation.Pannel.Manager
                     nextTopic = Topics.GameTypes;
                     return SlideModel.Content;
                 case 15:
-                    videoTopics = VideoTopics.GameTypesVideo;
+                    videoTopics = VideoTopics.GameTypesVideo2d;
                     return SlideModel.Video;
                 case 16:
-                    nextTopic = Topics.GameEngines;
-                    return SlideModel.Heading;
+                    videoTopics = VideoTopics.GameTypesVideo3d;
+                    return SlideModel.Video;
                 case 17:
                     nextTopic = Topics.GameEngines;
-                    return SlideModel.Content;
-                case 18:
-                    videoTopics = VideoTopics.GameEnginesVideo;
                     return SlideModel.Heading;
+                case 18:
+                    nextTopic = Topics.GameEngines;
+                    return SlideModel.Content;
                 case 19:
-                    nextTopic = Topics.Demo1;
+                    videoTopics = VideoTopics.GameEnginesVideo;
                     return SlideModel.Heading;
                 case 20:
                     nextTopic = Topics.Demo1;
-                    return SlideModel.Content;
+                    return SlideModel.Heading;
                 case 21:
                     nextTopic = Topics.Demo1;
                     return SlideModel.Content;
                 case 22:
+                    nextTopic = Topics.Demo1;
+                    return SlideModel.Content;
+                case 23:
                     nextTopic = Topics.Demo1;
                     return SlideModel.Video;
                 default:

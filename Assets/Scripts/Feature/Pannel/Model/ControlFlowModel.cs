@@ -3,8 +3,8 @@
     public enum ControlFlowModel
     {
         OverviewHeading = 0,
-        OverviewContent = 1,
-        OverviewVideo = 2,
+        OverviewVideo = 1,
+        OverviewContent = 2,
         GameGenresHeading = 3,
         GameGenresContent = 4,
         GameGenresVideoAction = 5,
@@ -17,14 +17,15 @@
         GamePlatformVideo = 12,
         GameTypesHeading = 13,
         GameTypesContent = 14,
-        GameTypesVideo = 15,
-        GameEnginesHeading = 16,
-        GameEnginesContent = 17,
-        GameEnginesVideo = 18,
-        DemoHeading = 19,
-        DemoContent1 = 20,       
-        DemoContent2 = 21,       
-        DemoContent3 = 22
+        GameTypesVideo2d = 15,
+        GameTypesVideo3d = 16,
+        GameEnginesHeading = 17,
+        GameEnginesContent = 18,
+        GameEnginesVideo = 19,
+        DemoHeading = 20,
+        DemoContent1 = 21,       
+        DemoContent2 = 22,       
+        DemoContent3 = 23
     }
 }
   

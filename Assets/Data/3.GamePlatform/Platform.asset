@@ -24,5 +24,6 @@ MonoBehaviour:
   - TELEVISION
   - WEB BROWSER
   - STREAMING
-  typeSpeed: 0.7
-  sentenceDelay: 1
+  - '!   -         -              -   !'
+  typeSpeed: 0.13
+  sentenceDelay: 0.17

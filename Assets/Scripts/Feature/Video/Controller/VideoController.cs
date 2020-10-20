@@ -9,8 +9,8 @@ namespace Presentation.Video.Controller
     public class VideoController : MonoBehaviour
     {
         public RawImage image;
-        public VideoClip video;
-        public AudioClip audio;
+        public VideoClip videoContent;
+        public AudioClip audioContent;
         public AudioSource audioSource;
 
         public VideoPlayer videoPlayer;
@@ -20,7 +20,7 @@ namespace Presentation.Video.Controller
 
         void Start()
         {
-            audioSource.clip = audio;
+            audioSource.clip = audioContent;
             Application.runInBackground = true;
             StartCoroutine(playVideo());
         }
@@ -35,12 +35,13 @@ namespace Presentation.Video.Controller
         {
             videoPlayer.playOnAwake = false;
             audioSource.playOnAwake = false;
-            //audioSource.volume = 1.0f;
+           // audioSource.volume = 1.0f;
+           // audioSource.volume = 1.0f;
             videoPlayer.source = VideoSource.VideoClip;
-            videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
-            videoPlayer.EnableAudioTrack(0, true);
-            videoPlayer.SetTargetAudioSource(0, audioSource);
-            videoPlayer.clip = video;
+          //  videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+           //videoPlayer.EnableAudioTrack(0, true);
+            //videoPlayer.SetTargetAudioSource(0, audioSource);
+            videoPlayer.clip = videoContent;
             videoPlayer.Prepare();
             while (!videoPlayer.isPrepared)
             {
@@ -48,7 +49,11 @@ namespace Presentation.Video.Controller
             }
             image.texture = videoPlayer.texture;
             videoPlayer.Play();
-            audioSource.PlayOneShot(audio, 0.06f);
+
+            //audioSource.clip = audioContent;
+            //audioSource.Play();
+            audioSource.PlayOneShot(audioContent, 0.1f);
+            audioSource.volume = 0.07f;
             while (videoPlayer.isPlaying)
             {
                 yield return null;

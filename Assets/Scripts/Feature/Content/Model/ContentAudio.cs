@@ -6,9 +6,10 @@
         gameGenres = 1,
         gamePlatform = 2,
         gameTypes = 3,
-        gameEngines = 4,
-        roles = 5,
-        demo = 6
+        gameEngines = 4,        
+        demo1 = 5,
+        demo2 = 6,
+        demo3 = 7
     }
 }
 

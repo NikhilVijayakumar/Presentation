@@ -10,7 +10,8 @@
         FarCry6 = 5,
         FlightSimulator = 6,
         GTA6 = 7,
-        None = 8
+        Witcher = 8,
+        None = 9
     }
 }
 

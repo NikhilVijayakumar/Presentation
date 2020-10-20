@@ -17,10 +17,11 @@ MonoBehaviour:
   - When its comes to game development there
   - are 2 major game engine.
   - Unity and  Unreal
-  - There are pleaty of other games engines
+  - There are plenty of other games engines
   - For instance for developing web games
   - We can use Phaser
   - Here in opentrnds we are using
   - Unity and  Phaser
-  typeSpeed: 0.7
-  sentenceDelay: 1
+  - '!   -         -              -   !'
+  typeSpeed: 0.09
+  sentenceDelay: 0.14

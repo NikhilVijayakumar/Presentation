@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: 1e336f7d03968274d93e8518a4a38b78, type: 3}
   data:
-  - There are 5 main gereres for games
+  - There are 5 main generes for games
   - Each of these generes has multiple
   - sub generes. The main 5 generes are
   - Action
@@ -22,5 +22,6 @@ MonoBehaviour:
   - "Role-playing\t"
   - Simulation
   - Strategy
-  typeSpeed: 0.7
-  sentenceDelay: 1
+  - '!  -    -    -     -       -       -  !'
+  typeSpeed: 0.13
+  sentenceDelay: 0.17

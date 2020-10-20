@@ -9,8 +9,9 @@
         GameGenresVideoSimulation = 4,
         GameGenresVideoStrategy = 5,
         GamePlatformVideo = 6,
-        GameTypesVideo = 7,
-        GameEnginesVideo = 8
+        GameTypesVideo2d = 7,
+        GameTypesVideo3d = 8,
+        GameEnginesVideo = 9
 
     }
 }
