@@ -41,6 +41,15 @@ namespace Presentation.Pannel.Helper
             activateHeadingAudio();
         }
 
+        public void activateThankyou(HeadingModel data)
+        {
+            HeadingView view = pannel.GetComponent<HeadingView>();
+            view.heading = data;
+            ActivateSlide();
+            ActivatePannel();
+            //activateHeadingAudio();
+        }
+
         private void activateHeadingAudio()
         {            
             AudioController controller = audioPannel.GetComponent<AudioController>();

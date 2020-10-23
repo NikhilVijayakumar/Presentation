@@ -127,7 +127,8 @@ namespace Presentation.Pannel.Controller
                 }
                 else
                 {
-
+                    deActivateAll();
+                    headingHelper.activateThankyou(data.headings[6]);                   
                 }
             }
         }
