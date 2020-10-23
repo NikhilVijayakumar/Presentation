@@ -28,6 +28,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8a01d4a2ed770274ab32b3641b60eea8, type: 2}
   - {fileID: 11400000, guid: d2f5239bdc917f142a07933af868f97f, type: 2}
   - {fileID: 11400000, guid: 2fb6e8a7c3e5f0141bbe1e8c29370519, type: 2}
+  - {fileID: 11400000, guid: 9f706d189783bc94a88e331225603d43, type: 2}
   video:
   - {fileID: 32900000, guid: de7e41dc123429042b12dccd74d930fc, type: 3}
   - {fileID: 32900000, guid: 46adb1c2326eb7948bb4d67aca0a7fbe, type: 3}
@@ -46,7 +47,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9faafad6cbdea8e468ec4f1246a51c8b, type: 3}
   - {fileID: 8300000, guid: 71935ee9f4b75ec42affa8f9c6d858c1, type: 3}
   - {fileID: 8300000, guid: ad19226978c469d48a821a139f3dccf3, type: 3}
-  - {fileID: 8300000, guid: d3a2b6641950b494cb28b3169d336a37, type: 3}
+  - {fileID: 8300000, guid: 73a32a695f0e8b946b8ca72cab4dea43, type: 3}
   contentClip:
   - {fileID: 8300000, guid: e7f290fd2f68e6a4d80a6455310312b1, type: 3}
   - {fileID: 8300000, guid: 63ccb5a0fe2f3ad40bb4659841f0b272, type: 3}

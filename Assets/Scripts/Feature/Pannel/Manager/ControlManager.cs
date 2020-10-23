@@ -93,7 +93,7 @@ namespace Presentation.Pannel.Manager
                     return SlideModel.Content;
                 case 19:
                     videoTopics = VideoTopics.GameEnginesVideo;
-                    return SlideModel.Heading;
+                    return SlideModel.Video;
                 case 20:
                     nextTopic = Topics.Demo1;
                     return SlideModel.Heading;
@@ -101,11 +101,11 @@ namespace Presentation.Pannel.Manager
                     nextTopic = Topics.Demo1;
                     return SlideModel.Content;
                 case 22:
-                    nextTopic = Topics.Demo1;
+                    nextTopic = Topics.Demo2;
                     return SlideModel.Content;
                 case 23:
-                    nextTopic = Topics.Demo1;
-                    return SlideModel.Video;
+                    nextTopic = Topics.Demo3;
+                    return SlideModel.Content;
                 default:
                     nextTopic = Topics.Finish;
                     return SlideModel.None;
